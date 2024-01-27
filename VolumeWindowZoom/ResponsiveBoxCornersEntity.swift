@@ -9,7 +9,9 @@ import RealityKit
 import SwiftUI
 import UIKit
 
-/// An entity that draws the corners of a box in a wireframe style.
+/// An entity that draws the corners of a box in a wireframe style, and which can
+/// automatically resize itself to volume size changes that occur when the user
+/// changes their Window Zoom preference in the visionOS Settings app.
 class ResponsiveBoxCornersEntity: Entity {
     
     func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01, color: UIColor = .white) {
