@@ -83,7 +83,7 @@ struct ScaledBoxVolumeContentView: View {
         /// The size of the volume, scaled to reflect the selected Window Zoom.
         let scaledVolumeSize = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
 
-        /// The user's selected Window Zoom scale factor, as ratio between the displayed
+        /// The user's selected Window Zoom scale factor, as a ratio between the displayed
         /// size of the volume and the size specified by `defaultSize` when the volume was
         /// originally defined.
         let scale = scaledVolumeSize.extents.x/Float(defaultSize.width)
