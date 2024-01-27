@@ -21,8 +21,8 @@ import SwiftUI
 /// contents of the volume to compensate for the new size of the volume.
 ///
 /// If an app doesn't use `GeometryReader3D`, the volume's contents will be clipped
-/// to the edge of the volume when the Window Zoom is Small or Medium, or
-/// excessively padded when the Window Zoom is Extra Large.
+/// to the edge of the volume when the Window Zoom is Small or Medium, or will
+/// exhibit excessive padding when the Window Zoom is Extra Large.
 @main
 struct VolumeWindowZoomApp: App {
 
