@@ -41,7 +41,7 @@ struct UnscaledBoxVolumeContentView: View {
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
-                responsiveBoxCornersEntity.update(with: content, for: proxy, defaultSize: defaultSize)
+                responsiveBoxCornersEntity.update(with: content, for: proxy)
             }
         }
     }

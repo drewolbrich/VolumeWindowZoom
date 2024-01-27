@@ -43,7 +43,7 @@ struct ScaledBoxVolumeContentView: View {
             } update: { content in
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
-                responsiveBoxCornersEntity.update(with: content, for: proxy, defaultSize: defaultSize)
+                responsiveBoxCornersEntity.update(with: content, for: proxy)
             }
         }
     }

@@ -13,11 +13,37 @@ import UIKit
 /// automatically resize itself to volume size changes that occur when the user
 /// changes their Window Zoom preference in the visionOS Settings app.
 class ResponsiveBoxCornersEntity: Entity {
+
+    private var defaultSize: Size3D = .zero
+    
+    private var lineLength: Float = 0
+    
+    private var lineWidth: Float = 0
+    
+    private var color: UIColor = .magenta
     
     func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01, color: UIColor = .white) {
         // `make` should not be called twice.
         assert(children.isEmpty)
         
+        self.defaultSize = defaultSize
+        self.lineLength = lineLength
+        self.lineWidth = lineWidth
+        self.color = color
+        
+        update(with: content, for: proxy)
+    }
+    
+    func update(with content: RealityViewContent, for proxy: GeometryProxy3D) {
+        children.removeAll()
+        
+        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
+        let scale = Double(scaledVolumeContentBoundingBox.extents.x)/defaultSize.width
+        
+        addCorners(with: defaultSize*scale)
+    }
+    
+    private func addCorners(with size: Size3D) {
         var lineMaterial = PhysicallyBasedMaterial()
         lineMaterial.baseColor = .init(tint: color)
         lineMaterial.roughness = .init(floatLiteral: 1)
@@ -39,7 +65,7 @@ class ResponsiveBoxCornersEntity: Entity {
         for xAxisSign: Float in [-1, 1] {
             for yAxisSign: Float in [-1, 1] {
                 for zAxisSign: Float in [-1, 1] {
-                    var position = SIMD3<Float>(defaultSize.vector)/2
+                    var position = SIMD3<Float>(size.vector)/2
                     position.x *= xAxisSign
                     position.y *= yAxisSign
                     position.z *= zAxisSign
@@ -47,14 +73,6 @@ class ResponsiveBoxCornersEntity: Entity {
                 }
             }
         }
-        
-        update(with: content, for: proxy, defaultSize: defaultSize)
-    }
-    
-    func update(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D) {
-        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
-        let scale = scaledVolumeContentBoundingBox.extents.x/Float(defaultSize.width)
-        self.scale = [1, 1, 1]*scale
     }
     
 }
