@@ -16,7 +16,6 @@ struct DefaultVolumeContentView: View {
         RealityView { content in
             let radius: Float = 0.5*Float(min(defaultSize.width, defaultSize.height, defaultSize.depth))
             
-            // This sphere does not change size in response to the user's Window Zoom preference.
             let sphereEntity = SphereEntity(radius: radius, color: .systemRed)
             content.add(sphereEntity)
         }
