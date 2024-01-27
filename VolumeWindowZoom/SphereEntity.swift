@@ -13,8 +13,14 @@ import UIKit
 /// Both the exterior and interior surfaces are represented.
 class SphereEntity: Entity {
 
-    init(radius: Float, color: UIColor, interiorColor: UIColor = .darkGray) {
+    init(radius: Float, color: UIColor) {
         super.init()
+        
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 1
+        var brightness: CGFloat = 1
+        color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: nil)
+        let interiorColor = UIColor(hue: hue, saturation: saturation*0.6, brightness: brightness*0.5, alpha: 1)
         
         let sphereMesh = MeshResource.generateSphere(radius: radius)
         
