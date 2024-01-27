@@ -23,7 +23,7 @@ class ResponsiveBoxCornersEntity: Entity {
     private var color: UIColor = .magenta
     
     /// This method must be called from the RealityView's `make` closure.
-    func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01, color: UIColor = .white) {
+    func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.08, lineWidth: Float = 0.006, color: UIColor = .white) {
         // `make` should not be called twice.
         assert(children.isEmpty)
         
