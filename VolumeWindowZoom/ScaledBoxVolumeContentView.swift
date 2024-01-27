@@ -42,7 +42,7 @@ struct ScaledBoxVolumeContentView: View {
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
-                // When the user selects a new Window Zoom preference, scale the contents of the
+                // When the user selects a new Window Zoom preference, we scale the contents of the
                 // volume to reflect it's new size.
                 //
                 // We don't necessarily have to scale the contents of the volume. Depending on the
@@ -54,8 +54,8 @@ struct ScaledBoxVolumeContentView: View {
                 // the developer's expectations.
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
-                // When the user selects a new Window Zoom preference, update the positions of the
-                // volume's corner decorations the reflect the new size of the volume.
+                // When the user selects a new Window Zoom preference, we update the positions of
+                // the volume's corner decorations the reflect the new size of the volume.
                 responsiveBoxCornersEntity.update(with: content, for: proxy)
             }
         }
