@@ -8,6 +8,22 @@
 import SwiftUI
 import RealityKit
 
+/// A view that displays a red sphere in a `RealityView`.
+///
+/// This view is also decorated with `ResponsiveBoxCornersEntity`, which highlights
+/// the corners of the RealityView's volume.
+///
+/// When the sphere is created, it is sized to fit exactly within `defaultSize`,
+/// which should correspond to the value passed to the volumetric window group's
+/// `defaultSize(_:in:)` view modifier.
+///
+/// When the user changes their Window Zoom preference in the Settings app,
+/// `GeometryReader3D` is used to adjust the size of `ResponsiveBoxCornersEntity` to
+/// match the new size of the volume.
+///
+/// In this view, `GeometryReader3D` is not used to change the size of the red
+/// sphere, so it will appear clipped or padded depending on the Window Zoom
+/// preference.
 struct UnscaledBoxVolumeContentView: View {
 
     let defaultSize: Size3D
