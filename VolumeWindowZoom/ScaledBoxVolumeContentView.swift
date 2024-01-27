@@ -43,7 +43,7 @@ struct ScaledBoxVolumeContentView: View {
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
                 // When the user selects a new Window Zoom preference, we scale the contents of the
-                // volume to reflect it's new size.
+                // volume to reflect its new size.
                 //
                 // We don't necessarily have to scale the contents of the volume. Depending on the
                 // application, we might want to align the volume's contents with the edge of the
