@@ -8,7 +8,9 @@
 import RealityKit
 import UIKit
 
-/// An entity that draws a sphere with a solid interior surface.
+/// An entity that draws a sphere.
+///
+/// Both the exterior and interior surfaces are represented.
 class SphereEntity: Entity {
 
     init(radius: Float, color: UIColor, interiorColor: UIColor = .darkGray) {
