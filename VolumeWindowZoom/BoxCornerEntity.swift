@@ -12,11 +12,11 @@ import UIKit
 /// An entity that draws the corners of a box in a wireframe style.
 class BoxCornerEntity: Entity {
     
-    init(size: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01) {
+    init(size: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01, color: UIColor = .white) {
         super.init()
 
         var lineMaterial = PhysicallyBasedMaterial()
-        lineMaterial.baseColor = .init(tint: .white)
+        lineMaterial.baseColor = .init(tint: color)
         lineMaterial.roughness = .init(floatLiteral: 1)
         
         func addCorner(at position: SIMD3<Float>) {
