@@ -72,9 +72,15 @@ struct ScaledBoxVolumeContentView: View {
     /// This method must be called by both the `make` and `update` closure of the
     /// volume's `RealityView`.
     func scale(entity: Entity, with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D) {
-        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
-        let scale = scaledVolumeContentBoundingBox.extents.x/Float(defaultSize.width)
-        entity.scale = [1, 1, 1]*scale
+        /// The size of the volume, scaled to reflect the selected Window Zoom.
+        let scaledVolumeSize = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
+
+        /// The user's selected Window Zoom scale factor, as ratio between the displayed
+        /// size of the volume and the size specified by `defaultSize` when the volume was
+        /// originally defined.
+        let scale = scaledVolumeSize.extents.x/Float(defaultSize.width)
+
+        entity.scale = .one*scale
     }
 
 }
