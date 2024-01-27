@@ -26,7 +26,7 @@ import SwiftUI
 @main
 struct VolumeWindowZoomApp: App {
 
-    /// The size of the volumes presented by the app.
+    /// The size of the volumes presented by the app, measured in meters.
     let defaultSize = Size3D(width: 0.5, height: 0.5, depth: 0.5)
 
     var body: some Scene {
