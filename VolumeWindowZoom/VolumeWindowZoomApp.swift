@@ -16,8 +16,8 @@ import SwiftUI
 /// of the windows and volumes presented by visionOS. However, it only automatically
 /// scales the contents of windows, not volumes.
 ///
-/// When a Window Zoom value other than Large (the default) is selected, it's the
-/// app's responsibility to use `GeometryReader3D` to scale or reposition the
+/// When a Window Zoom value other than Large (the default value) is selected, it's
+/// the app's responsibility to use `GeometryReader3D` to scale or reposition the
 /// contents of the volume to compensate for the new size of the volume.
 ///
 /// If an app doesn't use `GeometryReader3D`, the volume's contents will be clipped
