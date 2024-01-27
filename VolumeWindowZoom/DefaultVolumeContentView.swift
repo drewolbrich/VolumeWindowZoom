@@ -16,7 +16,7 @@ import RealityKit
 ///
 /// Because `GeometryReader3D` is not used, if this view is placed in a volume and
 /// the user changes their Window Zoom preference in the Settings app, the sphere
-/// may be clipped if the volume is too small or surrounded by extra padding if the
+/// may be clipped if the volume is too small, or surrounded by extra padding if the
 /// volume is too large.
 struct DefaultVolumeContentView: View {
     
