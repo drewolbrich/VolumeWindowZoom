@@ -11,10 +11,10 @@ import SwiftUI
 /// contents of a volumetric window group to reflect the user's Window Zoom
 /// preference as selected in the Settings app.
 ///
-/// In the visionOS Settings app, the Display > Appearance > Window Zoom
-/// preference (with options Small, Medium, Large, and Extra Large) scales the size
-/// of the windows and volumes presented by visionOS. However, it only automatically
-/// scales the contents of windows, not volumes.
+/// In the visionOS Settings app, the Display > Appearance > Window Zoom preference
+/// (with options Small, Medium, Large, and Extra Large) scales the size of the
+/// windows and volumes presented by visionOS. However, it only automatically scales
+/// the contents of windows, not volumes.
 ///
 /// When a Window Zoom value other than Large (the default value) is selected, it's
 /// the app's responsibility to use `GeometryReader3D` to scale or reposition the
