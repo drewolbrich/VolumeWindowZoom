@@ -12,10 +12,20 @@ struct ScaledVolumeContentView: View {
 
     let defaultSize: Size3D
     
+    @PhysicalMetric(from: .meters) var oneMeterInPoints = 1
+    
     var body: some View {
-        RealityView { contents in
-            // TODO
+        ZStack {
+            RealityView { content in
+                let radius: Float = 0.5*Float(min(defaultSize.width, defaultSize.height, defaultSize.depth))
+                
+                let sphereEntity = SphereEntity(radius: radius, color: .systemBlue)
+                content.add(sphereEntity)
+            }
+            
+            BoxCornerView(defaultSize: defaultSize)
         }
+        .offset(z: -defaultSize.depth/2*oneMeterInPoints)
     }
     
 }

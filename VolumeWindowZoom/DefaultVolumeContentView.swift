@@ -9,19 +9,23 @@ import SwiftUI
 import RealityKit
 
 struct DefaultVolumeContentView: View {
-
+    
     let defaultSize: Size3D
     
+    @PhysicalMetric(from: .meters) var oneMeterInPoints = 1
+    
     var body: some View {
-        RealityView { contents in
-            let radius: Float = 0.5*Float(min(defaultSize.width, defaultSize.height, defaultSize.depth))
+        ZStack {
+            RealityView { content in
+                let radius: Float = 0.5*Float(min(defaultSize.width, defaultSize.height, defaultSize.depth))
+                
+                let sphereEntity = SphereEntity(radius: radius, color: .systemRed)
+                content.add(sphereEntity)
+            }
             
-            let sphereEntity = SphereEntity(radius: radius, color: .systemOrange)
-            contents.add(sphereEntity)
-            
-            let boxCornerEntity = BoxCornerEntity(size: defaultSize)
-            contents.add(boxCornerEntity)
+            BoxCornerView(defaultSize: defaultSize)
         }
+        .offset(z: -defaultSize.depth/2*oneMeterInPoints)
     }
     
 }
