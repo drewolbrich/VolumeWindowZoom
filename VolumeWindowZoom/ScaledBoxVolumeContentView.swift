@@ -18,7 +18,7 @@ import RealityKit
 /// `defaultSize(_:in:)` view modifier.
 ///
 /// In this view, `GeometryReader3D` is used to dynamically adapt the size of the
-/// sphere to reflect the user's Window Zoom preference.
+/// sphere to reflect the user's Window Zoom setting.
 struct ScaledBoxVolumeContentView: View {
 
     /// The value passed to the volumetric window group's `defaultSize(_:in:)` view modifier.
@@ -27,7 +27,7 @@ struct ScaledBoxVolumeContentView: View {
     /// A root entity added to the `RealityView`.
     ///
     /// This entity is automatically scaled to reflect changes to the user's selected
-    /// Window Zoom preference.
+    /// Window Zoom setting.
     @State private var scaledRootEntity = Entity()
     
     /// A decorative entity used to highlight the corners of the volume.
@@ -48,7 +48,7 @@ struct ScaledBoxVolumeContentView: View {
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
-                // When the user selects a new Window Zoom preference, we scale the contents of the
+                // When the user selects a new Window Zoom setting, we scale the contents of the
                 // volume to reflect its new size.
                 //
                 // We don't necessarily have to scale the contents of the volume. Depending on the
@@ -61,7 +61,7 @@ struct ScaledBoxVolumeContentView: View {
                 // matches the developer's expectations.
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
-                // When the user selects a new Window Zoom preference, we update the positions of
+                // When the user selects a new Window Zoom setting, we update the positions of
                 // the volume's corner decorations the reflect the new size of the volume.
                 responsiveBoxCornersEntity.update(with: content, for: proxy)
             }

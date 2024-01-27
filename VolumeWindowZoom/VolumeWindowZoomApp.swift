@@ -53,7 +53,7 @@ struct VolumeWindowZoomApp: App {
 
         WindowGroup(id: "scaled-volume") {
             // A view containing a blue sphere and highlighted corners of a box of size
-            // `defaultSize`. If the user changes their Window Zoom preference in the settings
+            // `defaultSize`. If the user changes their Window Zoom preference in the Settings
             // app, the sphere is adaptively scaled to reflect changes in the size of the
             // volume.
             ScaledBoxVolumeContentView(defaultSize: defaultSize)

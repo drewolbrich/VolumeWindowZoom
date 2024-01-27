@@ -43,7 +43,7 @@ struct UnscaledBoxVolumeContentView: View {
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
-                // When the user selects a new Window Zoom preference, update the positions of the
+                // When the user selects a new Window Zoom setting, update the positions of the
                 // volume's corner decorations the reflect the new size of the volume.
                 responsiveBoxCornersEntity.update(with: content, for: proxy)
             }
