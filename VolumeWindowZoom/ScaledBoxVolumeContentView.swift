@@ -63,7 +63,7 @@ struct ScaledBoxVolumeContentView: View {
     }
     
     /// Sets the scale of `entity` to reflect the user's Window Zoom preference, as
-    /// selected in the Settings app under Display > Appearance > Window Zoom.
+    /// selected by the user in the Settings app under Display > Appearance > Window Zoom.
     ///
     /// It is assumed that `entity` is displayed at the origin of a volumetric window
     /// group. `defaultSize` must be equal to the value passed to the volumetric window
