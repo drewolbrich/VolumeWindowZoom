@@ -38,16 +38,30 @@ struct ScaledBoxVolumeContentView: View {
                 let sphereEntity = SphereEntity(radius: radius, color: .systemBlue)
                 scaledRootEntity.addChild(sphereEntity)
 
+                // Decorate the corners of the volume so we can tell how large the volume is.
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
+                // Update the size of the volume's content when the user selects a new Window Zoom
+                // preference.
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
+                // When the user selects a new Window Zoom preference, update the positions of the
+                // volume's corner decorations.
                 responsiveBoxCornersEntity.update(with: content, for: proxy)
             }
         }
     }
     
+    /// Sets the scale of `entity` to reflect the user's Window Zoom preference, as
+    /// selected in the Settings app under Display > Appearance > Window Zoom.
+    ///
+    /// It is assumed that `entity` is displayed at the origin of a volumetric window
+    /// group. `defaultSize` must be equal to the value passed to the volumetric window
+    /// group's `defaultSize(_:in:)` view modifier when it was first created.
+    ///
+    /// This method must be called by both the `make` and `update` closure of the
+    /// volume's `RealityView`.
     func scale(entity: Entity, with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D) {
         let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
         let scale = scaledVolumeContentBoundingBox.extents.x/Float(defaultSize.width)
