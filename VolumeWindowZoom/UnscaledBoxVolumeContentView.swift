@@ -27,6 +27,7 @@ struct UnscaledBoxVolumeContentView: View {
 
     let defaultSize: Size3D
     
+    /// A decorative entity used to highlight the corners of the volume.
     @State private var responsiveBoxCornersEntity = ResponsiveBoxCornersEntity()
     
     var body: some View {
