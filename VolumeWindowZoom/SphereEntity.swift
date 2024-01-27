@@ -8,9 +8,10 @@
 import RealityKit
 import UIKit
 
+/// An entity that draws a sphere with a solid interior surface.
 class SphereEntity: Entity {
 
-    init(radius: Float, color: UIColor) {
+    init(radius: Float, color: UIColor, interiorColor: UIColor = .darkGray) {
         super.init()
         
         let sphereMesh = MeshResource.generateSphere(radius: radius)
@@ -30,8 +31,6 @@ class SphereEntity: Entity {
         
         addChild(exteriorModelEntity)
 
-        let interiorColor: UIColor = .darkGray
-        
         var interiorMaterial = PhysicallyBasedMaterial()
         interiorMaterial.faceCulling = .front
         interiorMaterial.baseColor = .init(tint: interiorColor)
