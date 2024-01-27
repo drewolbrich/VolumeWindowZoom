@@ -23,6 +23,10 @@ struct ScaledBoxVolumeContentView: View {
 
     let defaultSize: Size3D
     
+    /// A root entity added to the `RealityView`.
+    ///
+    /// This entity is automatically scaled to reflect changes to the user's selected
+    /// Window Zoom preference.
     @State private var scaledRootEntity = Entity()
     
     @State private var responsiveBoxCornersEntity = ResponsiveBoxCornersEntity()
