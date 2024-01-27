@@ -31,7 +31,7 @@ struct VolumeWindowZoomApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // A view with three buttons that open each of the volumes below.
+            // A view with three buttons that open each of the volumes defined below.
             ContentView()
         }
         .windowResizability(.contentSize)
