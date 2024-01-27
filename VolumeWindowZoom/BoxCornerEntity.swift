@@ -29,8 +29,7 @@ class BoxCornerEntity: Entity {
                 lineModelEntity.position = position - cornerDirection*lineSize/2
                 
                 addChild(lineModelEntity)
-            }
-            
+            }            
         }
 
         for xAxisSign: Float in [-1, 1] {
