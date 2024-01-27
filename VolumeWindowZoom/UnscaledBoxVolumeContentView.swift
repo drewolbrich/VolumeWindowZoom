@@ -21,9 +21,8 @@ import RealityKit
 /// `GeometryReader3D` is used to adjust the size of `ResponsiveBoxCornersEntity` to
 /// match the new size of the volume.
 ///
-/// In this view, `GeometryReader3D` is not used to change the size of the red
-/// sphere, so it will appear clipped or padded depending on the Window Zoom
-/// preference.
+/// In this view, `GeometryReader3D` is not used to change the size of the sphere,
+/// so it will appear clipped or padded depending on the Window Zoom preference.
 struct UnscaledBoxVolumeContentView: View {
 
     let defaultSize: Size3D
