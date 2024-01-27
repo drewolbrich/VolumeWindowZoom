@@ -71,7 +71,7 @@ struct ScaledBoxVolumeContentView: View {
     /// `defaultSize` must be equal to the value passed to the volumetric window group's
     /// `defaultSize(_:in:)` view modifier when it was first created.
     ///
-    /// This method must be called by both the `make` and `update` closure of the
+    /// This method must be called by both the `make` and `update` closures of the
     /// volume's `RealityView`.
     func scale(entity: Entity, with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D) {
         /// The size of the volume, scaled to reflect the selected Window Zoom.
