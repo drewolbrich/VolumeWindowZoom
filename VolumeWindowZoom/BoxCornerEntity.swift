@@ -9,6 +9,7 @@ import RealityKit
 import SwiftUI
 import UIKit
 
+/// An entity that draws the corners of a box in a wireframe style.
 class BoxCornerEntity: Entity {
     
     init(size: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01) {
@@ -29,7 +30,7 @@ class BoxCornerEntity: Entity {
                 lineModelEntity.position = position - cornerDirection*lineSize/2
                 
                 addChild(lineModelEntity)
-            }            
+            }
         }
 
         for xAxisSign: Float in [-1, 1] {
