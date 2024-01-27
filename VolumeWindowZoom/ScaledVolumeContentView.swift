@@ -12,7 +12,7 @@ struct ScaledVolumeContentView: View {
 
     let defaultSize: Size3D
     
-    @State private var boxCornerEntity = BoxCornerEntity()
+    @State private var responsiveBoxCornersEntity = ResponsiveBoxCornersEntity()
     
     var body: some View {
         GeometryReader3D { proxy in
@@ -22,10 +22,10 @@ struct ScaledVolumeContentView: View {
                 let sphereEntity = SphereEntity(radius: radius, color: .systemBlue)
                 content.add(sphereEntity)
 
-                boxCornerEntity.make(with: content, for: proxy, defaultSize: defaultSize)
-                content.add(boxCornerEntity)
+                responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
+                content.add(responsiveBoxCornersEntity)
             } update: { content in
-                boxCornerEntity.update(with: content, for: proxy, defaultSize: defaultSize)
+                responsiveBoxCornersEntity.update(with: content, for: proxy, defaultSize: defaultSize)
             }
         }
     }

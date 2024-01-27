@@ -1,5 +1,5 @@
 //
-//  BoxCornerEntity.swift
+//  ResponsiveBoxCornersEntity.swift
 //  VolumeWindowZoom
 //
 //  Created by Drew Olbrich on 1/27/24.
@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 
 /// An entity that draws the corners of a box in a wireframe style.
-class BoxCornerEntity: Entity {
+class ResponsiveBoxCornersEntity: Entity {
     
     func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.1, lineWidth: Float = 0.01, color: UIColor = .white) {
         // `make` should not be called twice.
