@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-/// A visionOS 1.0 app that demonstrates how to use `GeometryReader3D` to scale the
+/// A visionOS app that demonstrates how to use `GeometryReader3D` to scale the
 /// contents of a volumetric window group to reflect the user's Window Zoom
 /// preference as selected in the Settings app.
 ///
-/// In the visionOS 1.0 Settings app, the Display > Appearance > Window Zoom
+/// In the visionOS Settings app, the Display > Appearance > Window Zoom
 /// preference (with options Small, Medium, Large, and Extra Large) scales the size
 /// of the windows and volumes presented by visionOS. However, it only automatically
 /// scales the contents of windows, not volumes.
