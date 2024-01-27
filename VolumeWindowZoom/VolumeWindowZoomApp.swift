@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct VolumeWindowZoomApp: App {
     
-    let volumeDefaultSize = Size3D(width: 0.5, height: 0.5, depth: 0.5)
+    let defaultSize = Size3D(width: 0.5, height: 0.5, depth: 0.5)
 
     var body: some Scene {
         WindowGroup {
@@ -19,22 +19,22 @@ struct VolumeWindowZoomApp: App {
         .windowResizability(.contentSize)
         
         WindowGroup(id: "default-volume") {
-            DefaultVolumeContentView(defaultSize: volumeDefaultSize)
+            DefaultVolumeContentView(defaultSize: defaultSize)
         }
         .windowStyle(.volumetric)
-        .defaultSize(volumeDefaultSize, in: .meters)
+        .defaultSize(defaultSize, in: .meters)
 
         WindowGroup(id: "unscaled-volume") {
-            UnscaledBoxVolumeContentView(defaultSize: volumeDefaultSize)
+            UnscaledBoxVolumeContentView(defaultSize: defaultSize)
         }
         .windowStyle(.volumetric)
-        .defaultSize(volumeDefaultSize, in: .meters)
+        .defaultSize(defaultSize, in: .meters)
 
         WindowGroup(id: "scaled-volume") {
-            ScaledBoxVolumeContentView(defaultSize: volumeDefaultSize)
+            ScaledBoxVolumeContentView(defaultSize: defaultSize)
         }
         .windowStyle(.volumetric)
-        .defaultSize(volumeDefaultSize, in: .meters)
+        .defaultSize(defaultSize, in: .meters)
     }
     
 }
