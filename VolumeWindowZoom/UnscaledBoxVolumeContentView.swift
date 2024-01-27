@@ -14,7 +14,7 @@ import RealityKit
 /// the corners of the RealityView's volume.
 ///
 /// When the sphere is created, it is sized to fit exactly within `defaultSize`,
-/// which should correspond to the value passed to the volumetric window group's
+/// which must correspond to the value passed to the volumetric window group's
 /// `defaultSize(_:in:)` view modifier.
 ///
 /// When the user changes their Window Zoom preference in the Settings app,
