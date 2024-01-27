@@ -44,6 +44,14 @@ struct ScaledBoxVolumeContentView: View {
             } update: { content in
                 // When the user selects a new Window Zoom preference, scale the contents of the
                 // volume to reflect it's new size.
+                //
+                // We don't necessarily have to scale the contents of the volume. Depending on the
+                // application, we might want to align the volume's contents with the edge of the
+                // volume or display a different amount of content.
+                //
+                // However, since in visionOS 1.0 volumes aren't resizable by the user (aside from
+                // by changing Window Zoom), scaling the contents of the volume most likely matches
+                // the developer's expectations.
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
                 // When the user selects a new Window Zoom preference, update the positions of the
