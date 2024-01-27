@@ -35,6 +35,9 @@ class ResponsiveBoxCornersEntity: Entity {
     }
     
     func update(with content: RealityViewContent, for proxy: GeometryProxy3D) {
+        // `make(with:for:defaultSize:lineLength:lineWidth:color:)` must have been called first.
+        assert(!children.isEmpty)
+
         children.removeAll()
         
         let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
