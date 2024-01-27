@@ -18,6 +18,9 @@ struct DefaultVolumeContentView: View {
             
             let sphereEntity = SphereEntity(radius: radius, color: .systemOrange)
             contents.add(sphereEntity)
+            
+            let boxCornerEntity = BoxCornerEntity(size: defaultSize)
+            contents.add(boxCornerEntity)
         }
     }
     
