@@ -7,20 +7,21 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
+    
+    @Environment(\.openWindow) var openWindow
+    
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
+        VStack(spacing: 40) {
+            Button("Open Default Volume") {
+                openWindow(id: "default-volume")
+            }
+            Button("Open Scaled Volume") {
+                openWindow(id: "scaled-volume")
+            }
         }
-        .padding()
+        .padding(60)
     }
-}
-
-#Preview(windowStyle: .automatic) {
-    ContentView()
+    
 }

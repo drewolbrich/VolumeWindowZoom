@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A299AA12B65476E00C86235 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3A299AA02B65476E00C86235 /* RealityKitContent */; };
 		3A299AA32B65476E00C86235 /* VolumeWindowZoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AA22B65476E00C86235 /* VolumeWindowZoomApp.swift */; };
 		3A299AA52B65476E00C86235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AA42B65476E00C86235 /* ContentView.swift */; };
 		3A299AA72B65476F00C86235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A299AA62B65476F00C86235 /* Assets.xcassets */; };
-		3A299AAA2B65476F00C86235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A299AA92B65476F00C86235 /* Preview Assets.xcassets */; };
+		3A299AB22B654A3400C86235 /* DefaultVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */; };
+		3A299AB42B654AA000C86235 /* ScaledVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */; };
+		3AC44F9D2B654C360071FAF2 /* SphereEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A299A9B2B65476E00C86235 /* VolumeWindowZoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeWindowZoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A299A9F2B65476E00C86235 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		3A299AA22B65476E00C86235 /* VolumeWindowZoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeWindowZoomApp.swift; sourceTree = "<group>"; };
 		3A299AA42B65476E00C86235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A299AA62B65476F00C86235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A299AA92B65476F00C86235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A299AAB2B65476F00C86235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVolumeContentView.swift; sourceTree = "<group>"; };
+		3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledVolumeContentView.swift; sourceTree = "<group>"; };
+		3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A299AA12B65476E00C86235 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				3A299A9D2B65476E00C86235 /* VolumeWindowZoom */,
-				3A299A9E2B65476E00C86235 /* Packages */,
 				3A299A9C2B65476E00C86235 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,27 +58,13 @@
 			children = (
 				3A299AA22B65476E00C86235 /* VolumeWindowZoomApp.swift */,
 				3A299AA42B65476E00C86235 /* ContentView.swift */,
+				3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */,
+				3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */,
+				3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */,
 				3A299AA62B65476F00C86235 /* Assets.xcassets */,
 				3A299AAB2B65476F00C86235 /* Info.plist */,
-				3A299AA82B65476F00C86235 /* Preview Content */,
 			);
 			path = VolumeWindowZoom;
-			sourceTree = "<group>";
-		};
-		3A299A9E2B65476E00C86235 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				3A299A9F2B65476E00C86235 /* RealityKitContent */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
-		3A299AA82B65476F00C86235 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				3A299AA92B65476F00C86235 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +84,6 @@
 			);
 			name = VolumeWindowZoom;
 			packageProductDependencies = (
-				3A299AA02B65476E00C86235 /* RealityKitContent */,
 			);
 			productName = VolumeWindowZoom;
 			productReference = 3A299A9B2B65476E00C86235 /* VolumeWindowZoom.app */;
@@ -142,7 +127,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A299AAA2B65476F00C86235 /* Preview Assets.xcassets in Resources */,
 				3A299AA72B65476F00C86235 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +139,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A299AA52B65476E00C86235 /* ContentView.swift in Sources */,
+				3AC44F9D2B654C360071FAF2 /* SphereEntity.swift in Sources */,
+				3A299AB22B654A3400C86235 /* DefaultVolumeContentView.swift in Sources */,
+				3A299AB42B654AA000C86235 /* ScaledVolumeContentView.swift in Sources */,
 				3A299AA32B65476E00C86235 /* VolumeWindowZoomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +275,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VolumeWindowZoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -313,7 +300,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VolumeWindowZoom/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -353,13 +340,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3A299AA02B65476E00C86235 /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A299A932B65476E00C86235 /* Project object */;
 }
