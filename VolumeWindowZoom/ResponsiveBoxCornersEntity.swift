@@ -31,7 +31,7 @@ class ResponsiveBoxCornersEntity: Entity {
         self.lineWidth = lineWidth
         self.color = color
         
-        update(with: content, for: proxy)
+        addCorners(with: content, for: proxy)
     }
     
     func update(with content: RealityViewContent, for proxy: GeometryProxy3D) {
@@ -40,13 +40,14 @@ class ResponsiveBoxCornersEntity: Entity {
 
         children.removeAll()
         
-        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
-        let scale = Double(scaledVolumeContentBoundingBox.extents.x)/defaultSize.width
-        
-        addCorners(with: defaultSize*scale)
+        addCorners(with: content, for: proxy)
     }
     
-    private func addCorners(with size: Size3D) {
+    private func addCorners(with content: RealityViewContent, for proxy: GeometryProxy3D) {
+        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
+        let scale = Double(scaledVolumeContentBoundingBox.extents.x)/defaultSize.width
+        let size = defaultSize*scale
+
         var lineMaterial = PhysicallyBasedMaterial()
         lineMaterial.baseColor = .init(tint: color)
         lineMaterial.roughness = .init(floatLiteral: 1)
