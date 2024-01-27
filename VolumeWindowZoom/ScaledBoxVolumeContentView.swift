@@ -10,8 +10,8 @@ import RealityKit
 
 /// A view that displays a blue sphere in a `RealityView`.
 ///
-/// This view is also decorated with `ResponsiveBoxCornersEntity`, which highlights
-/// the corners of the RealityView's volume.
+/// This view is decorated with `ResponsiveBoxCornersEntity`, which highlights the
+/// corners of the RealityView's volume.
 ///
 /// When the sphere is created, it is sized to fit exactly within `defaultSize`,
 /// which must correspond to the value passed to the volumetric window group's
