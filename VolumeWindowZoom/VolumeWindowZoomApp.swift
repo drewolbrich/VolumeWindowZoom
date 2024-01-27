@@ -24,8 +24,14 @@ struct VolumeWindowZoomApp: App {
         .windowStyle(.volumetric)
         .defaultSize(volumeDefaultSize, in: .meters)
 
+        WindowGroup(id: "unscaled-volume") {
+            UnscaledBoxVolumeContentView(defaultSize: volumeDefaultSize)
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(volumeDefaultSize, in: .meters)
+
         WindowGroup(id: "scaled-volume") {
-            ScaledVolumeContentView(defaultSize: volumeDefaultSize)
+            ScaledBoxVolumeContentView(defaultSize: volumeDefaultSize)
         }
         .windowStyle(.volumetric)
         .defaultSize(volumeDefaultSize, in: .meters)

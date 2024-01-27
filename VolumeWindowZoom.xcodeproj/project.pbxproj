@@ -11,9 +11,10 @@
 		3A299AA52B65476E00C86235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AA42B65476E00C86235 /* ContentView.swift */; };
 		3A299AA72B65476F00C86235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A299AA62B65476F00C86235 /* Assets.xcassets */; };
 		3A299AB22B654A3400C86235 /* DefaultVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */; };
-		3A299AB42B654AA000C86235 /* ScaledVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */; };
+		3A299AB42B654AA000C86235 /* ScaledBoxVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A299AB32B654AA000C86235 /* ScaledBoxVolumeContentView.swift */; };
 		3AC44F9D2B654C360071FAF2 /* SphereEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */; };
 		3AC44F9F2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44F9E2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift */; };
+		3AC44FA32B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44FA22B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +24,10 @@
 		3A299AA62B65476F00C86235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A299AAB2B65476F00C86235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVolumeContentView.swift; sourceTree = "<group>"; };
-		3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledVolumeContentView.swift; sourceTree = "<group>"; };
+		3A299AB32B654AA000C86235 /* ScaledBoxVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledBoxVolumeContentView.swift; sourceTree = "<group>"; };
 		3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereEntity.swift; sourceTree = "<group>"; };
 		3AC44F9E2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveBoxCornersEntity.swift; sourceTree = "<group>"; };
+		3AC44FA22B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnscaledBoxVolumeContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 				3A299AA22B65476E00C86235 /* VolumeWindowZoomApp.swift */,
 				3A299AA42B65476E00C86235 /* ContentView.swift */,
 				3A299AB12B654A3400C86235 /* DefaultVolumeContentView.swift */,
-				3A299AB32B654AA000C86235 /* ScaledVolumeContentView.swift */,
+				3AC44FA22B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift */,
+				3A299AB32B654AA000C86235 /* ScaledBoxVolumeContentView.swift */,
 				3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */,
 				3AC44F9E2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift */,
 				3A299AA62B65476F00C86235 /* Assets.xcassets */,
@@ -142,10 +145,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A299AA52B65476E00C86235 /* ContentView.swift in Sources */,
+				3AC44FA32B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift in Sources */,
 				3AC44F9F2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift in Sources */,
 				3AC44F9D2B654C360071FAF2 /* SphereEntity.swift in Sources */,
 				3A299AB22B654A3400C86235 /* DefaultVolumeContentView.swift in Sources */,
-				3A299AB42B654AA000C86235 /* ScaledVolumeContentView.swift in Sources */,
+				3A299AB42B654AA000C86235 /* ScaledBoxVolumeContentView.swift in Sources */,
 				3A299AA32B65476E00C86235 /* VolumeWindowZoomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

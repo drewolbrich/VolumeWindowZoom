@@ -1,5 +1,5 @@
 //
-//  ScaledVolumeContentView.swift
+//  ScaledBoxVolumeContentView.swift
 //  VolumeWindowZoom
 //
 //  Created by Drew Olbrich on 1/27/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import RealityKit
 
-struct ScaledVolumeContentView: View {
+struct ScaledBoxVolumeContentView: View {
 
     let defaultSize: Size3D
     

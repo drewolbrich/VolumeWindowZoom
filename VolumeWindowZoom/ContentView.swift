@@ -17,6 +17,9 @@ struct ContentView: View {
             Button("Open Default Volume") {
                 openWindow(id: "default-volume")
             }
+            Button("Open Unscaled Volume") {
+                openWindow(id: "unscaled-volume")
+            }
             Button("Open Scaled Volume") {
                 openWindow(id: "scaled-volume")
             }
