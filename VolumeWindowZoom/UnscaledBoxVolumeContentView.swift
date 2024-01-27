@@ -25,6 +25,7 @@ import RealityKit
 /// so it will appear clipped or padded depending on the Window Zoom preference.
 struct UnscaledBoxVolumeContentView: View {
 
+    /// The value passed to the volumetric window group's `defaultSize(_:in:)` view modifier.
     let defaultSize: Size3D
     
     /// A decorative entity used to highlight the corners of the volume.

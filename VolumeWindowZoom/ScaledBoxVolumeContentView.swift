@@ -21,6 +21,7 @@ import RealityKit
 /// sphere to reflect the user's Window Zoom preference.
 struct ScaledBoxVolumeContentView: View {
 
+    /// The value passed to the volumetric window group's `defaultSize(_:in:)` view modifier.
     let defaultSize: Size3D
     
     /// A root entity added to the `RealityView`.

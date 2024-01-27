@@ -20,6 +20,7 @@ import RealityKit
 /// surrounded by extra padding if the volume is too large.
 struct DefaultVolumeContentView: View {
     
+    /// The value passed to the volumetric window group's `defaultSize(_:in:)` view modifier.
     let defaultSize: Size3D
     
     var body: some View {
