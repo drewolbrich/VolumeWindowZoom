@@ -39,6 +39,8 @@ struct ScaledBoxVolumeContentView: View {
                 let radius: Float = 0.5*Float(min(defaultSize.width, defaultSize.height, defaultSize.depth))
 
                 content.add(scaledRootEntity)
+
+                // Scale of the volume's content to reflect the initial Window Zoom setting.
                 scale(entity: scaledRootEntity, with: content, for: proxy, defaultSize: defaultSize)
 
                 let sphereEntity = SphereEntity(radius: radius, color: .systemBlue)
