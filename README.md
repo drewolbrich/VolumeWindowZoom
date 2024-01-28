@@ -7,3 +7,5 @@ For a complete description of the issue addressed by this project, see
 [http://www.lunarskydiving.com/blog/volume-window-zoom/](http://www.lunarskydiving.com/blog/volume-window-zoom/).
 
 <img src="https://github.com/drewolbrich/VolumeWindowZoom/raw/main/box-medium~1200.jpg" width="600px">
+
+The code you're looking for is in the file [ScaledBoxVolumeContentView.swift](VolumeWindowZoom/ScaledBoxVolumeContentView.swift). 
