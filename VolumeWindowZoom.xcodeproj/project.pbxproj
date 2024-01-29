@@ -16,6 +16,8 @@
 		3AC44F9D2B654C360071FAF2 /* SphereEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */; };
 		3AC44F9F2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44F9E2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift */; };
 		3AC44FA32B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC44FA22B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift */; };
+		3AF67CBC2B67F64700B08629 /* screenshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67CBB2B67F64700B08629 /* screenshot.jpg */; };
+		3AF67CBE2B67F65400B08629 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67CBD2B67F65400B08629 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3AC44F9C2B654C360071FAF2 /* SphereEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereEntity.swift; sourceTree = "<group>"; };
 		3AC44F9E2B6552160071FAF2 /* ResponsiveBoxCornersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveBoxCornersEntity.swift; sourceTree = "<group>"; };
 		3AC44FA22B6585550071FAF2 /* UnscaledBoxVolumeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnscaledBoxVolumeContentView.swift; sourceTree = "<group>"; };
+		3AF67CBB2B67F64700B08629 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screenshot.jpg; sourceTree = "<group>"; };
+		3AF67CBD2B67F65400B08629 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				3A683DB52B66F6C9007780BF /* README.md */,
+				3AF67CBB2B67F64700B08629 /* screenshot.jpg */,
+				3AF67CBD2B67F65400B08629 /* LICENSE */,
 				3A299A9D2B65476E00C86235 /* VolumeWindowZoom */,
 				3A299A9C2B65476E00C86235 /* Products */,
 			);
@@ -136,7 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF67CBC2B67F64700B08629 /* screenshot.jpg in Resources */,
 				3A683DB62B66F6C9007780BF /* README.md in Resources */,
+				3AF67CBE2B67F65400B08629 /* LICENSE in Resources */,
 				3A299AA72B65476F00C86235 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
