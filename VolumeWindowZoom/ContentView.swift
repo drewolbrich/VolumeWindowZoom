@@ -15,13 +15,13 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 40) {
             Button("Open Default Volume") {
-                openWindow(id: "default-volume")
+                openWindow(id: "default-volume", value: "default-volume-1")
             }
             Button("Open Unscaled Volume") {
-                openWindow(id: "unscaled-volume")
+                openWindow(id: "unscaled-volume", value: "unscaled-volume-1")
             }
             Button("Open Scaled Volume") {
-                openWindow(id: "scaled-volume")
+                openWindow(id: "scaled-volume", value: "scaled-volume-1")
             }
         }
         .padding(60)

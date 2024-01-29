@@ -36,14 +36,14 @@ struct VolumeWindowZoomApp: App {
         }
         .windowResizability(.contentSize)
         
-        WindowGroup(id: "default-volume") {
+        WindowGroup(id: "default-volume", for: String.self) { value in
             // A view containing a red sphere that fits within `defaultSize`.
             DefaultVolumeContentView(defaultSize: defaultSize)
         }
         .windowStyle(.volumetric)
         .defaultSize(defaultSize, in: .meters)
 
-        WindowGroup(id: "unscaled-volume") {
+        WindowGroup(id: "unscaled-volume", for: String.self) { value in
             // A view containing a red sphere and highlighted corners of a box of size
             // `defaultSize`.
             UnscaledBoxVolumeContentView(defaultSize: defaultSize)
@@ -51,7 +51,7 @@ struct VolumeWindowZoomApp: App {
         .windowStyle(.volumetric)
         .defaultSize(defaultSize, in: .meters)
 
-        WindowGroup(id: "scaled-volume") {
+        WindowGroup(id: "scaled-volume", for: String.self) { value in
             // A view containing a blue sphere and highlighted corners of a box of size
             // `defaultSize`. If the user changes their Window Zoom preference in the Settings
             // app, the sphere is adaptively scaled to reflect changes in the size of the
