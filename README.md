@@ -8,4 +8,4 @@ For a complete description of the issue addressed by this project, see
 
 The code that resizes the volume's contents is in the file [ScaledBoxVolumeContentView.swift](VolumeWindowZoom/ScaledBoxVolumeContentView.swift). 
 
-<img src="https://github.com/drewolbrich/VolumeWindowZoom/raw/main/box-medium~1200.jpg" width="600px">
+<img src="https://github.com/drewolbrich/VolumeWindowZoom/raw/main/screenshot.jpg" width="600px">
