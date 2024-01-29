@@ -50,8 +50,8 @@ struct ScaledBoxVolumeContentView: View {
                 responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
                 content.add(responsiveBoxCornersEntity)
                 
-                // Note: Window Zoom automatically scales all SwiftUI attachments, so you should
-                // add them to `content` instead of parenting them to `scaledRootEntity`.
+                // Important: Window Zoom automatically scales all SwiftUI attachments, so you
+                // should add them to `content` instead of parenting them to `scaledRootEntity`.
                 // Otherwise, your attachments will be scaled twice.
             } update: { content in
                 // When the user selects a new Window Zoom setting, we scale the contents of the
