@@ -52,7 +52,8 @@ struct ScaledBoxVolumeContentView: View {
                 
                 // Important: Window Zoom automatically scales all SwiftUI attachments, so you
                 // should add them to `content` instead of parenting them to `scaledRootEntity`.
-                // Otherwise, your attachments will be scaled twice.
+                // Otherwise, your attachments will be scaled twice. Alternatively, you could apply
+                // an inverse scale to your attachment entities.
             } update: { content in
                 // When the user selects a new Window Zoom setting, we scale the contents of the
                 // volume to reflect its new size.
