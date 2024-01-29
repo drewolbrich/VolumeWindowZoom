@@ -88,7 +88,7 @@ struct ScaledBoxVolumeContentView: View {
         /// The user's selected Window Zoom scale factor, as a ratio between the displayed
         /// size of the volume and the size specified by `defaultSize` when the volume was
         /// originally defined.
-        let scale = scaledVolumeSize.extents.x/Float(defaultSize.width)
+        let scale = (scaledVolumeSize.extents/SIMD3<Float>(defaultSize)).min()
 
         entity.scale = .one*scale
     }
