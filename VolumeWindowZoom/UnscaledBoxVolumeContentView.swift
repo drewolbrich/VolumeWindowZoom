@@ -40,7 +40,7 @@ struct UnscaledBoxVolumeContentView: View {
                 content.add(sphereEntity)
 
                 // Decorate the corners of the volume so we can tell how large the volume is.
-                responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
+                responsiveBoxCornersEntity.make(with: content, for: proxy)
                 content.add(responsiveBoxCornersEntity)
             } update: { content in
                 // When the user selects a new Window Zoom setting, update the positions of the

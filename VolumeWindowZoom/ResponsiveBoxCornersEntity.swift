@@ -14,8 +14,6 @@ import UIKit
 /// changes their Window Zoom preference in the visionOS Settings app.
 class ResponsiveBoxCornersEntity: Entity {
 
-    private var defaultSize: Size3D = .zero
-    
     private var lineLength: Float = 0
     
     private var lineWidth: Float = 0
@@ -23,11 +21,10 @@ class ResponsiveBoxCornersEntity: Entity {
     private var color: UIColor = .magenta
     
     /// This method must be called from the RealityView's `make` closure.
-    func make(with content: RealityViewContent, for proxy: GeometryProxy3D, defaultSize: Size3D, lineLength: Float = 0.08, lineWidth: Float = 0.006, color: UIColor = .white) {
+    func make(with content: RealityViewContent, for proxy: GeometryProxy3D, lineLength: Float = 0.08, lineWidth: Float = 0.006, color: UIColor = .white) {
         // `make` should not be called twice.
         assert(children.isEmpty)
         
-        self.defaultSize = defaultSize
         self.lineLength = lineLength
         self.lineWidth = lineWidth
         self.color = color
@@ -46,9 +43,7 @@ class ResponsiveBoxCornersEntity: Entity {
     }
     
     private func addCorners(with content: RealityViewContent, for proxy: GeometryProxy3D) {
-        let scaledVolumeContentBoundingBox = content.convert(proxy.frame(in: .local), from: .local, to: .scene)
-        let scale = Double(scaledVolumeContentBoundingBox.extents.x)/defaultSize.width
-        let size = defaultSize*scale
+        let size = content.convert(proxy.frame(in: .local), from: .local, to: .scene).extents
 
         var lineMaterial = PhysicallyBasedMaterial()
         lineMaterial.baseColor = .init(tint: color)
@@ -71,7 +66,7 @@ class ResponsiveBoxCornersEntity: Entity {
         for xAxisSign: Float in [-1, 1] {
             for yAxisSign: Float in [-1, 1] {
                 for zAxisSign: Float in [-1, 1] {
-                    var position = SIMD3<Float>(size.vector)/2
+                    var position = size/2
                     position.x *= xAxisSign
                     position.y *= yAxisSign
                     position.z *= zAxisSign

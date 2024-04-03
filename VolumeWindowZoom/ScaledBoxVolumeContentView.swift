@@ -47,7 +47,7 @@ struct ScaledBoxVolumeContentView: View {
                 scaledRootEntity.addChild(sphereEntity)
 
                 // Decorate the corners of the volume so we can tell how large the volume is.
-                responsiveBoxCornersEntity.make(with: content, for: proxy, defaultSize: defaultSize)
+                responsiveBoxCornersEntity.make(with: content, for: proxy)
                 content.add(responsiveBoxCornersEntity)
                 
                 // Important: Window Zoom automatically scales all SwiftUI attachments, so you
